@@ -115,17 +115,24 @@ a{
 .places-wrapper{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     list-style: none;
     padding-left: 0;
     flex-wrap: wrap;
+    height: 65px;
+    width: 100%;
 }
 
 .place-button{
-    padding: 21px 97px 21px 97px;
+    width: 24%;
+    height: 100%;
     border-radius: 6px;
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 65px;
 }
 
 .wilds{
@@ -220,7 +227,7 @@ a{
     display: flex;
     position: relative;
     margin: 8px;
-    min-width: 441px;
+    width: 441px;
     height: 148px;
     background-color: yellowgreen;
     border-radius: 6px;
