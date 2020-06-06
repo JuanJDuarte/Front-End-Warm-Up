@@ -33,6 +33,7 @@
 
 /* TEXT STYLES */
 .main-title{
+    text-align: center;
     font-size: calc(var(--main-Title) * 1em);
     margin-top: 0;
     margin-bottom: calc(var(--spacing-01) * 0.5rem);
@@ -89,6 +90,7 @@ button[class$="-Btn"]{
     display: flex;
     width: 100%;
     height: 60px;
+    border-top: solid 2px var(--links-Color);
     background-color: var(--main-Color);
     align-items: center;
     align-content: center;
@@ -154,6 +156,9 @@ button[class$="-Btn"]{
     display: flex;
     width: 100%;
     min-height: 600px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--secundary-Color);
 }
 
@@ -161,6 +166,9 @@ footer{
     display: flex;
     width: 100%;
     min-height: 146px;
+    color: var(--text-over-dark-Color);
+    justify-content: center;
+    align-items: center;
     background-color: var(--font-Color);
 }
 
@@ -198,7 +206,7 @@ footer{
     margin: 0 0 calc(var(--spacing-06) * 1rem) 0;
     list-style: none;
     font-size: var(--paragraph);
-    
+    flex-wrap: wrap;
 }
 
 .place-Btn{
@@ -262,13 +270,43 @@ footer{
 .tag{
     position: absolute;
     border-radius: 6px 0 6px 0;
-    top: -22px;
+    top: -19px;
     left: 0px;
     color: var(--text-over-dark-Color);
     padding: 5px 25px 5px 25px;
     background-color: var(--links-Color);
+    font-size: 14px;
 }
 
 .country{
     color: var(--text-over-dark-Color);
 }
+
+/* Forms */
+.form-section #form-title{ 
+    color:var(--text-over-dark-Color);
+    margin-top: calc(var(--spacing-05) * 1rem);
+    margin-bottom: calc(var(--spacing-03) * 1rem);;
+}
+
+#form-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - var(--hor-margin) * 4);
+    background-color: var(--backGround-Color);
+    text-align: left;
+    padding: calc(var(--spacing-02) * 1rem);
+    border-radius: 6px;
+    margin-bottom: calc(var(--spacing-06) * 1rem);;
+}
+
+#form-wrapper input, textarea{ 
+    min-height: 45px;
+    width: 100%;
+    border-radius: 6px;
+    border: solid 1px lightgray; 
+}
+
+label{ margin-bottom: calc(var(--spacing-01) * 0.5rem);}
+input{ margin-bottom: calc(var(--spacing-01) * 1rem);}
+textarea{ margin-bottom: calc(var(--spacing-02) * 1rem);}

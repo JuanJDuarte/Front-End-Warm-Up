@@ -1,135 +1,106 @@
-/* -------- Tablet -------- */
-@media only screen and (min-width: 600px){
-    body{
-        background-color: white;
-    }
-    /* HERO */
-    .hero-wrapper .main-title{
-        text-align: center;
-        width: 80%;
-    }
-    /*Fcards*/
-    .fCards-wrapper{
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    .featured-card{
-        min-width: 280px;
-        width: 45%;
-    }
-
-    /*Content*/
-    .first-content-block{
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .first-content-block .secondary-title {
-        margin-top: 0px;
-    }
-
-    .article-wrapper{
-        width: 90%;
-        margin: auto;
-    }
-
-    #man-image{
-        height: 400px;
-        object-position: left;
-    }
-
-    #form-wrapper{
-        width: 86%;
-    }
-}
-
-/* -------- Mobile -------- */
+/*--- Header ---*/
 @media only screen and (max-width: 600px){
     
-    body{
-        background-color: white;
+    :root{
+    /* SIDE MARGINS */
+    --hor-margin: 5%;
     }
+
     .nav-elements{
         display: none;
     }
-    /* HERO */
-    #logo{
-        padding-left: 0;
-        margin: auto;
-    }
-    .hero-wrapper .main-title{
-        text-align: center;
-        width: 80%;
-    }
-    /* PLACES */
-    .place-button{
+
+    .place-Btn{
         width: 49%;
-        margin-bottom: 8px;
+        margin-bottom: 2%;
     }
-    /* CONTENT */
+
     .first-content-block{
-        flex-direction: column;
-        flex-wrap: wrap;
-        flex-flow: column-reverse;
-        padding-top: 60px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: calc(var(--spacing-04) * 1rem);
+        margin-bottom: calc(var(--spacing-04) * 1rem);
     }
-    
-    .visit-title{
-        padding-left: 10%;
-        padding-right: 10%;
-    }
+
     .first-article{
         text-align: center;
         width: 100%;
-        padding-right: 24px;
-        margin: 0;
     }
-    
+
     #man-image{
         width: 100%;
         height: 200px;
-        border-radius: 6px;
-        object-fit: cover;
-    }
-    #form-wrapper{
-        width: 80%;
-    }
-
-    .fCards-wrapper{
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-}
-
-/* -------- Desktop-------- */
-@media only screen and (min-width: 1024px){
-    body{
-        background-color: white;
+        margin-bottom: calc(var(--spacing-03) * 1rem);
     }
 
     .featured-card{
-        width: 441px;
+        width: 100%;
+        margin-bottom: 4%;
     }
+}
+
+@media only screen and (min-width: 601px){
+    :root{
+        /* SIDE MARGINS */
+        --hor-margin: 5%;
+    }
+
     .first-content-block{
-        margin-left: 10%;
-        margin-right: 10%;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: calc(var(--spacing-04) * 1rem);
     }
-    .article-wrapper{
-        width: 80%;
-        margin: auto;
+
+    .first-article{
+        text-align: center;
+        width: 100%;
     }
 
     #man-image{
-        width: 50%;
-        height: 300px;
-        border-radius: 6px;
-        object-fit: cover;
-        object-position: center;
+        width: 100%;
+        height: 250px;
+        margin-bottom: calc(var(--spacing-03) * 1rem);
+    }
+    
+    .places-wrapper{
+        margin: 0 0 calc(var(--spacing-04) * 1rem) 0;
     }
 
-    #form-wrapper{
-        width: 63%;
+    .featured-card-wrapper .main-Btn{
+        min-width: 90px;
+    }
+}
+
+@media only screen and (min-width: 764px){
+    :root{
+        /* SIDE MARGINS */
+        --hor-margin: 10%;
+    }
+
+    .first-content-block{
+        display: flex;
+        width: calc(100% - var(--hor-margin) * 2);
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    #man-image{
+        width: 49%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .first-article{
+        text-align: left;
+        width: 48%;
+    }
+
+    .places-wrapper{
+        margin: 0 0 calc(var(--spacing-06) * 1rem) 0;
+    }
+
+    .featured-card-wrapper .main-Btn{
+        min-width: 150px;
     }
 }
